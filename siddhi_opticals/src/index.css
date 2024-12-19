@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media print {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bg-gray-100 {
+    background-color: #fff !important;
+  }
+
+  .table-auto {
+    width: 100% !important;
+  }
+
+  .table-auto th,
+  .table-auto td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+
+  .table-auto th {
+    background-color: #f4f4f4;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  /* Hide elements that shouldn't appear on print */
+  .bg-white {
+    background-color: #fff !important;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+
+.dropdown-animation {
+  animation: fadeIn 0.2s ease-out;
+}
+/* Add to your global CSS file if needed */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
